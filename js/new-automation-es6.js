@@ -9,7 +9,10 @@ const UserCreator = class {
     this.userScore = userScore;
   };
   incrementScore() {
-    this.userScore += 1;
+    const addScore = (n) => {
+      this.userScore += n;
+    };
+    addScore(1);
   };
 };
 
@@ -20,6 +23,9 @@ const PaidUserCreator = class extends UserCreator {
     this.userBalance = paidUserBalance;
   };
   incrementBalance() {
-    this.userBalance += 1;
+    const addBalance = (n) => {
+      this.userBalance += n;
+    };
+    addBalance(1);
   };
 };
