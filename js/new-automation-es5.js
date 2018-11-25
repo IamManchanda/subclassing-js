@@ -9,7 +9,10 @@ const UserCreator = function (userName, userScore) {
 };
 
 UserCreator.prototype.incrementScore = function () {
-  this.userScore += 1;
+  const addScore = (n) => {
+    this.userScore += n;
+  };
+  addScore(1);
 };
 
 const PaidUserCreator = function (paidUserName, paidUserScore, paidUserBalance) {
@@ -21,6 +24,9 @@ const PaidUserCreator = function (paidUserName, paidUserScore, paidUserBalance) 
 
 PaidUserCreator.prototype = Object.create(UserCreator.prototype);
 PaidUserCreator.prototype.incrementBalance = function () {
-  this.userBalance += 1;
+  const addBalance = (n) => {
+    this.userBalance += n;
+  };
+  addBalance(1);
 };
 

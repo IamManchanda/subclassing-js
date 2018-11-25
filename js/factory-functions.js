@@ -12,7 +12,10 @@ const UserCreator = function (userName, userScore) {
 
 const userFunctions = {
   incrementScore() {
-    this.userScore += 1;
+    const addScore = (n) => {
+      this.userScore += n;
+    };
+    addScore(1);
   },
 };
 
@@ -26,7 +29,10 @@ const PaidUserCreator = function (paidUserName, paidUserScore, paidUserBalance) 
 
 const paidUserFunctions = {
   incrementBalance() {
-    this.userBalance += 1;
+    const addBalance = (n) => {
+      this.userBalance += n;
+    };
+    addBalance(1);
   },
 };
 
